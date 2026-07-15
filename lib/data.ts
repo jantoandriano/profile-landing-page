@@ -68,15 +68,18 @@ export type Project = {
   org: string;
   desc: string;
   stack: string;
+  status?: "ongoing";
+  link?: string;
 };
 
 export const projects: Project[] = [
-  { num: "01", tag: "SaaS", title: "Multi-Tenant SaaS Platform", org: "Hyperscal", desc: "Enterprise-grade platform with SSR/CSR strategy, dynamic routing, and per-tenant data isolation serving concurrent clients.", stack: "Next.js · TypeScript · TanStack Query" },
-  { num: "02", tag: "Design System", title: "Internal Package Suite", org: "Hyperscal", desc: "Form/validation, i18n, file uploader and RBAC libraries adopted as shared standards — cutting boilerplate 40%.", stack: "TypeScript · React · Tooling" },
-  { num: "03", tag: "Healthcare", title: "EMR Patient Portal", org: "Eka Hospital", desc: "Secure, real-time patient record access with responsive interfaces and Vue-Query caching.", stack: "Vue.js · Nuxt.js · Nuxt UI" },
-  { num: "04", tag: "Healthcare", title: "BPJS Management System", org: "Eka Hospital", desc: "End-to-end registration, scheduling and poly coverage on Nuxt SSR — replacing manual workflows.", stack: "Vue.js · Nuxt.js · SSR" },
-  { num: "05", tag: "E-commerce", title: "CMS Platform Trio", org: "SehatQ", desc: "Three CMS platforms used daily by hundreds of merchants and staff, with Midtrans/Nicepay payments.", stack: "React · Next.js · Redux-Saga · Chakra UI" },
-  { num: "06", tag: "Web App", title: "Skyporter", org: "Skybridge", desc: "Built from the ground up — church operations, member management and digital offerings, full frontend lifecycle.", stack: "React.js · Tailwind" },
+  { num: "01", tag: "Backend · System Design", title: "System Design NestJS", org: "Personal Project", desc: "Production-hardened NestJS backend scaffold — primary/replica Postgres, RabbitMQ with dead-letter queues, edge + app rate limiting, and Prometheus/Grafana observability — bridging system-design theory with real infrastructure.", stack: "NestJS · PostgreSQL · RabbitMQ · Docker", status: "ongoing", link: "https://github.com/jantoandriano/system-design-nestjs" },
+  { num: "02", tag: "SaaS", title: "Multi-Tenant SaaS Platform", org: "Hyperscal", desc: "Enterprise-grade platform with SSR/CSR strategy, dynamic routing, and per-tenant data isolation serving concurrent clients.", stack: "Next.js · TypeScript · TanStack Query" },
+  { num: "03", tag: "Design System", title: "Internal Package Suite", org: "Hyperscal", desc: "Form/validation, i18n, file uploader and RBAC libraries adopted as shared standards — cutting boilerplate 40%.", stack: "TypeScript · React · Tooling" },
+  { num: "04", tag: "Healthcare", title: "EMR Patient Portal", org: "Eka Hospital", desc: "Secure, real-time patient record access with responsive interfaces and Vue-Query caching.", stack: "Vue.js · Nuxt.js · Nuxt UI" },
+  { num: "05", tag: "Healthcare", title: "BPJS Management System", org: "Eka Hospital", desc: "End-to-end registration, scheduling and poly coverage on Nuxt SSR — replacing manual workflows.", stack: "Vue.js · Nuxt.js · SSR" },
+  { num: "06", tag: "E-commerce", title: "CMS Platform Trio", org: "SehatQ", desc: "Three CMS platforms used daily by hundreds of merchants and staff, with Midtrans/Nicepay payments.", stack: "React · Next.js · Redux-Saga · Chakra UI" },
+  { num: "07", tag: "Web App", title: "Skyporter", org: "Skybridge", desc: "Built from the ground up — church operations, member management and digital offerings, full frontend lifecycle.", stack: "React.js · Tailwind" },
 ];
 
 export type SkillGroup = { name: string; items: string[] };
