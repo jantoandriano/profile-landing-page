@@ -16,10 +16,28 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const title = "Janto Motulo — Senior Frontend Developer";
+const description =
+  "Senior Frontend Developer crafting scalable, high-performance web apps with React & Next.js. 6+ years turning complex requirements into pixel-perfect, production-grade UIs.";
+
 export const metadata: Metadata = {
-  title: "Janto Motulo — Senior Frontend Developer",
-  description:
-    "Senior Frontend Developer crafting scalable, high-performance web apps with React & Next.js. 6+ years turning complex requirements into pixel-perfect, production-grade UIs.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://project-name.vercel.app"
+  ),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    url: "/",
+    siteName: "Janto Motulo",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
