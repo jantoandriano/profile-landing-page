@@ -9,7 +9,7 @@ export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-[1440px] scroll-mt-20 px-5 pb-14 pt-10 sm:px-10 md:pb-24 md:pt-20 lg:px-16">
       <div className="mb-8 flex items-baseline gap-4 md:mb-13">
-        <span className="font-mono text-[13px]" style={{ color: ACCENT }}>02</span>
+        <span className="font-mono text-[13px]" style={{ color: ACCENT }}>03</span>
         <span className="font-mono text-[13px] uppercase tracking-[0.14em] text-ink/50">Experience</span>
       </div>
 
