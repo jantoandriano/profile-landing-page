@@ -12,13 +12,15 @@ export const experience: Job[] = [
   {
     company: "Hyperscal",
     role: "Senior Frontend Developer",
-    meta: "Oct 2024 — Present · 1 yr 8 mos · Remote",
+    meta: "Oct 2024 — Present · 1 yr 10 mos · Remote",
     stack: ["Next.js", "TypeScript", "TanStack Query", "RBAC", "i18n"],
     points: [
-      "Architected a scalable multi-tenant SaaS platform with SSR/CSR rendering strategies, dynamic routing, and per-tenant data isolation to reliably serve concurrent enterprise clients.",
-      "Built and maintained a suite of proprietary internal packages — form/validation library, i18n, file uploader, and RBAC — cutting boilerplate 40%, enforcing type safety, and adopted as shared standards across all feature teams.",
-      "Improved performance with TanStack Query (caching, optimistic UI, request dedup), reducing network requests and improving load times against performance budgets.",
-      "Integrated GitHub Copilot and Claude Code into daily workflows to accelerate delivery and improve code review quality.",
+      "Architected a multi-tenant B2B SaaS platform in Next.js/TypeScript — rendering strategy (SSR/CSR), dynamic routing, application state, and per-tenant data isolation — serving concurrent enterprise clients from a single codebase.",
+      "Built and maintained a suite of proprietary internal packages — form/validation library, i18n, file uploader, and RBAC — versioned and consumed as shared standards by every feature team, cutting boilerplate ~40% and enforcing type safety org-wide.",
+      "Designed API integration and caching layers with TanStack Query (query caching, request dedup, optimistic updates, retry/stale handling) against a distributed service backend, with graceful loading and fallback states.",
+      "Held the platform to explicit performance budgets, reducing redundant network requests and improving load and interaction times through caching, code splitting, and render optimisation.",
+      "Integrated Claude Code and GitHub Copilot into daily workflow and helped establish team conventions for where agents accelerate delivery versus where hand-written code and human review remain faster and safer.",
+      "Led technical design discussions, performed detailed code reviews, and mentored engineers on TypeScript, component design, and rendering trade-offs.",
     ],
   },
   {
@@ -27,8 +29,10 @@ export const experience: Job[] = [
     meta: "Jul 2023 — Apr 2025 · 1 yr 10 mos · Tangerang, ID",
     stack: ["Vue.js", "Nuxt.js", "Nuxt UI", "Vue-Query"],
     points: [
-      "Owned end-to-end delivery of a BPJS management system (registration, scheduling, poly coverage) built with Vue.js/Nuxt.js SSR, replacing manual workflows.",
-      "Built an EMR portal for secure, real-time patient record access, delivering responsive interfaces with Vue-Query for data fetching and caching.",
+      "Owned end-to-end delivery of a BPJS national-insurance management system (registration, scheduling, poly coverage) built with Vue.js and Nuxt SSR, replacing manual clinical workflows for a large multi-site hospital group.",
+      "Built an EMR portal for secure, real-time patient record access — modelling heavily stateful, permission-scoped views with reusable composable logic and Vue Query for data fetching, caching, and background revalidation.",
+      "Integrated multiple internal and third-party hospital services, handling partial-failure and empty states so clinical staff always had a usable interface rather than a blocked screen.",
+      "Shipped responsive, component-driven interfaces on Nuxt UI, working directly with Product and backend engineers under regulated healthcare constraints.",
     ],
   },
   {
@@ -37,8 +41,9 @@ export const experience: Job[] = [
     meta: "Jul 2021 — Jul 2023 · 2 yrs 1 mo · Jakarta, ID",
     stack: ["TypeScript", "React.js", "Next.js", "Redux-Saga", "Chakra UI"],
     points: [
-      "Built and maintained three CMS platforms (cms-toko, cms-internal, Telebod) in React.js/Next.js, used daily by hundreds of merchants and healthcare staff.",
-      "Integrated Midtrans/Nicepay payments and drove quality via unit/integration testing (Jest, RTL) and code review.",
+      "Built and maintained three CMS platforms (cms-toko, cms-internal, Telebod) in React.js/Next.js and TypeScript, used daily by hundreds of merchants and healthcare staff.",
+      "Integrated Midtrans and Nicepay payment gateways, handling asynchronous states, retries, and reconciliation edge cases in the UI.",
+      "Drove test coverage with Jest and React Testing Library across unit and integration layers, and raised standards through consistent code review.",
     ],
   },
   {
@@ -47,7 +52,7 @@ export const experience: Job[] = [
     meta: "Mar 2021 — Jul 2021 · Contract · Jakarta, ID",
     stack: ["React.js", "Next.js", "Redux Toolkit"],
     points: [
-      "Built internal property workflow tools and translated Zeplin design handoffs into reusable, responsive components.",
+      "Built internal property workflow tools in React.js/Next.js with Redux Toolkit, translating Zeplin handoffs into a reusable, responsive component set.",
     ],
   },
   {
@@ -56,7 +61,7 @@ export const experience: Job[] = [
     meta: "Nov 2019 — Mar 2021 · Contract · Indonesia",
     stack: ["React.js", "Tailwind UI"],
     points: [
-      "Built the Skyporter web app from the ground up (church ops, member management, digital offerings), owning the frontend lifecycle end-to-end.",
+      "Built the Skyporter web app from the ground up (organisation operations, member management, digital payments), owning the frontend lifecycle end-to-end.",
     ],
   },
 ];
