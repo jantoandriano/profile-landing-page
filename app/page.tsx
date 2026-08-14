@@ -119,8 +119,8 @@ export default function Home() {
               <span className="text-ink/45">SaaS, healthcare, and e-commerce</span>.
             </p>
             <p className="mt-6 text-[clamp(17px,2vw,21px)] font-medium leading-[1.5] text-ink/[0.78]">
-              Now going beyond the browser: building backend systems with NestJS, PostgreSQL, RabbitMQ, and
-              observability tooling to close the loop end-to-end —{" "}
+              Currently deep in Flutter and mobile development, stretching that same product sense onto native
+              screens — with an eye on pushing further into client-side engineering as the next frontier{" "}
               <a href="#work" className="font-bold text-ink underline underline-offset-2">
                 see the ongoing proof below
               </a>.
