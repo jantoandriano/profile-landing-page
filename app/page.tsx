@@ -48,7 +48,7 @@ export default function Home() {
           <p className="m-0 max-w-[560px] text-[clamp(17px,2vw,21px)] font-medium leading-[1.5] text-ink/[0.78]">
             <strong className="font-bold text-ink">Senior Frontend Developer</strong> crafting scalable,
             high-performance web apps with React &amp; Next.js — turning complex requirements into
-            pixel-perfect, production-grade UIs for 6+ years, now steadily expanding into <strong className="font-bold text-ink">Fullstack</strong>.
+            pixel-perfect, production-grade UIs for 6+ years, now steadily expanding into <strong className="font-bold text-ink">Mobile Development</strong>.
           </p>
           <div className="flex gap-3">
             <a
