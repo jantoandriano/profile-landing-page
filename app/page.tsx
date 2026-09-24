@@ -1,10 +1,15 @@
 import { projects, skills, ACCENT } from "@/lib/data";
+import { getGithubProjects } from "@/lib/github";
 import Experience from "@/components/Experience";
+
+export const revalidate = 3600;
 
 const MARQUEE =
   "React  ✳  Next.js  ✳  TypeScript  ✳  Vue  ✳  Nuxt  ✳  TanStack Query  ✳  Tailwind  ✳  Design Systems  ✳  SSR / CSR  ✳  Performance  ✳  ";
 
-export default function Home() {
+export default async function Home() {
+  const allProjects = [...(await getGithubProjects()), ...projects];
+
   return (
     <main className="min-w-0">
       {/* NAV */}
@@ -144,11 +149,11 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-1 gap-px border border-paper/[0.14] bg-paper/[0.14] sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((p) => {
+            {allProjects.map((p, i) => {
               const Card = p.link ? "a" : "div";
               return (
                 <Card
-                  key={p.num}
+                  key={p.link ?? p.title}
                   {...(p.link ? { href: p.link, target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="flex min-h-[260px] flex-col gap-4 bg-night p-7 no-underline transition-colors hover:bg-[#151515] md:p-9"
                 >
@@ -164,7 +169,7 @@ export default function Home() {
                         </span>
                       )}
                     </div>
-                    <span className="font-mono text-xs text-paper/40">{p.num}</span>
+                    <span className="font-mono text-xs text-paper/40">{String(i + 1).padStart(2, "0")}</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="m-0 text-[clamp(20px,2.3vw,27px)] font-extrabold leading-[1.1] tracking-[-0.02em] text-paper">{p.title}</h3>

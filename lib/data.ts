@@ -67,7 +67,6 @@ export const experience: Job[] = [
 ];
 
 export type Project = {
-  num: string;
   tag: string;
   title: string;
   org: string;
@@ -77,17 +76,23 @@ export type Project = {
   link?: string;
 };
 
+// Custom copy for GitHub repos tagged `portfolio`, keyed by repo name.
+// Repos without an entry fall back to their GitHub description and topics.
+export const repoOverrides: Record<string, Partial<Project>> = {
+  journally: { tag: "Mobile · Flutter", title: "Journally", desc: "Feature-organized Flutter app for logging cafe sightings and feeding logs, with reverse-geocoded locations and a Riverpod/repository-driven data layer.", stack: "Flutter · Dart · Riverpod", status: "ongoing" },
+  "journally-api": { tag: "Backend · API", title: "Journally API", desc: "Express/Prisma REST backend for Journally — Postgres-backed sighting and feeding-log endpoints, deployed via Docker/Caddy on Oracle Cloud.", stack: "Express · TypeScript · Prisma · PostgreSQL", status: "ongoing" },
+  tmbd_app: { tag: "Mobile · Flutter", title: "Flutter Mobile App", desc: "Self-directed dive into Flutter and native mobile patterns — widget composition, state management, and platform APIs — as a step toward broader client-side engineering.", stack: "Flutter · Dart" },
+  SnapFrame: { tag: "Mobile · Flutter", title: "SnapFrame", desc: "Gen Z–styled photobooth app — pick a frame, shoot a countdown photo series, retake any slot, then save or send the composed image to WhatsApp, with Free/Pro frame gating.", stack: "Flutter · Dart", status: "ongoing" },
+};
+
+// Projects without a public repo. Rendered after the GitHub repos.
 export const projects: Project[] = [
-  { num: "01", tag: "Mobile · Flutter", title: "Journally", org: "Personal Project", desc: "Feature-organized Flutter app for logging cafe sightings and feeding logs, with reverse-geocoded locations and a Riverpod/repository-driven data layer.", stack: "Flutter · Dart · Riverpod", status: "ongoing", link: "https://github.com/jantoandriano/journally" },
-  { num: "02", tag: "Backend · API", title: "Journally API", org: "Personal Project", desc: "Express/Prisma REST backend for Journally — Postgres-backed sighting and feeding-log endpoints, deployed via Docker/Caddy on Oracle Cloud.", stack: "Express · TypeScript · Prisma · PostgreSQL", status: "ongoing", link: "https://github.com/jantoandriano/journally-api" },
-  { num: "03", tag: "Mobile · Flutter", title: "Flutter Mobile App", org: "Personal Project", desc: "Self-directed dive into Flutter and native mobile patterns — widget composition, state management, and platform APIs — as a step toward broader client-side engineering.", stack: "Flutter · Dart", link: "https://github.com/jantoandriano/tmbd_app" },
-  { num: "04", tag: "Backend · System Design", title: "System Design NestJS", org: "Personal Project", desc: "Production-hardened NestJS backend scaffold — primary/replica Postgres, RabbitMQ with dead-letter queues, edge + app rate limiting, and Prometheus/Grafana observability — bridging system-design theory with real infrastructure.", stack: "NestJS · PostgreSQL · RabbitMQ · Docker", status: "ongoing" },
-  { num: "05", tag: "SaaS", title: "Multi-Tenant SaaS Platform", org: "Hyperscal", desc: "Enterprise-grade platform with SSR/CSR strategy, dynamic routing, and per-tenant data isolation serving concurrent clients.", stack: "Next.js · TypeScript · TanStack Query" },
-  { num: "06", tag: "Design System", title: "Internal Package Suite", org: "Hyperscal", desc: "Form/validation, i18n, file uploader and RBAC libraries adopted as shared standards — cutting boilerplate 40%.", stack: "TypeScript · React · Tooling" },
-  { num: "07", tag: "Healthcare", title: "EMR Patient Portal", org: "Eka Hospital", desc: "Secure, real-time patient record access with responsive interfaces and Vue-Query caching.", stack: "Vue.js · Nuxt.js · Nuxt UI" },
-  { num: "08", tag: "Healthcare", title: "BPJS Management System", org: "Eka Hospital", desc: "End-to-end registration, scheduling and poly coverage on Nuxt SSR — replacing manual workflows.", stack: "Vue.js · Nuxt.js · SSR" },
-  { num: "09", tag: "E-commerce", title: "CMS Platform Trio", org: "SehatQ", desc: "Three CMS platforms used daily by hundreds of merchants and staff, with Midtrans/Nicepay payments.", stack: "React · Next.js · Redux-Saga · Chakra UI" },
-  { num: "10", tag: "Web App", title: "Skyporter", org: "Skybridge", desc: "Built from the ground up — church operations, member management and digital offerings, full frontend lifecycle.", stack: "React.js · Tailwind" },
+  { tag: "SaaS", title: "Multi-Tenant SaaS Platform", org: "Hyperscal", desc: "Enterprise-grade platform with SSR/CSR strategy, dynamic routing, and per-tenant data isolation serving concurrent clients.", stack: "Next.js · TypeScript · TanStack Query" },
+  { tag: "Design System", title: "Internal Package Suite", org: "Hyperscal", desc: "Form/validation, i18n, file uploader and RBAC libraries adopted as shared standards — cutting boilerplate 40%.", stack: "TypeScript · React · Tooling" },
+  { tag: "Healthcare", title: "EMR Patient Portal", org: "Eka Hospital", desc: "Secure, real-time patient record access with responsive interfaces and Vue-Query caching.", stack: "Vue.js · Nuxt.js · Nuxt UI" },
+  { tag: "Healthcare", title: "BPJS Management System", org: "Eka Hospital", desc: "End-to-end registration, scheduling and poly coverage on Nuxt SSR — replacing manual workflows.", stack: "Vue.js · Nuxt.js · SSR" },
+  { tag: "E-commerce", title: "CMS Platform Trio", org: "SehatQ", desc: "Three CMS platforms used daily by hundreds of merchants and staff, with Midtrans/Nicepay payments.", stack: "React · Next.js · Redux-Saga · Chakra UI" },
+  { tag: "Web App", title: "Skyporter", org: "Skybridge", desc: "Built from the ground up — church operations, member management and digital offerings, full frontend lifecycle.", stack: "React.js · Tailwind" },
 ];
 
 export type SkillGroup = { name: string; items: string[] };
