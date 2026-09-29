@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import Image from "next/image";
 
-const PHOTO = "/portrait.jpg";
+const PHOTO = "/portrait.png";
 const hasPhoto = fs.existsSync(path.join(process.cwd(), "public", PHOTO));
 
 const HEX = "polygon(25% 0%, 75% 0%, 100% 30%, 100% 70%, 75% 100%, 25% 100%, 0% 70%, 0% 30%)";
