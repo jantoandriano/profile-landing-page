@@ -8,12 +8,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#f1f0ea",
-        ink: "#0f0f0f",
-        night: "#0d0d0d",
+        paper: "#f6f4ee",
+        ink: "#111111",
+        blue: "#3d5afe",
+        sky: "#a9c7ff",
+        lilac: "#c4a7ff",
+        lime: "#e4f47a",
+        pink: "#f5a3e8",
+        mint: "#a8f0b4",
+      },
+      boxShadow: {
+        brutal: "3px 3px 0 0 #111111",
+        "brutal-lg": "6px 6px 0 0 #111111",
       },
       fontFamily: {
-        sans: ["var(--font-archivo)", "system-ui", "sans-serif"],
+        sans: ["var(--font-display)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       keyframes: {
@@ -29,6 +38,7 @@ const config: Config = {
       animation: {
         marquee: "marquee 28s linear infinite",
         rise: "rise 0.35s ease both",
+        "spin-slow": "spin 20s linear infinite",
       },
     },
   },

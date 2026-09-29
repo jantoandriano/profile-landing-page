@@ -7,13 +7,22 @@ html {
 }
 
 body {
-  background: #f1f0ea;
-  color: #0f0f0f;
+  background: #f6f4ee;
+  color: #111111;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: #0f0f0f;
-  color: #f1f0ea;
+  background: #a9c7ff;
+  color: #111111;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 border-[1.5px] border-ink px-5 py-3 text-[15px] font-semibold text-ink no-underline shadow-brutal transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 border-[1.5px] border-ink px-2.5 py-1 text-[12px] font-medium leading-none text-ink;
+  }
 }

@@ -1,4 +1,17 @@
-export const ACCENT = "#0f0f0f"; // swap for pop: #2a6df4, #e5484d, #1f8a5b
+export const stats = [
+  { big: "6+", label: "Years experience" },
+  { big: "40%", label: "Boilerplate cut with internal tooling" },
+  { big: "5", label: "Companies shipped for" },
+  { big: "4", label: "Industry domains" },
+];
+
+export type Service = { icon: "globe" | "layers" | "phone"; title: string; desc: string };
+
+export const services: Service[] = [
+  { icon: "globe", title: "Web Development", desc: "Scalable, high-performance web apps in React & Next.js — SSR/CSR strategy, caching and pixel-perfect, production-grade UI." },
+  { icon: "layers", title: "Frontend Architecture", desc: "Internal design systems and shared packages — forms, i18n, RBAC — that teams adopt as standards and ship faster with." },
+  { icon: "phone", title: "Mobile Development", desc: "Taking the same product sense onto native screens with Flutter — widget composition, state management and platform APIs." },
+];
 
 export type Job = {
   company: string;
